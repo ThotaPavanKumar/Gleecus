@@ -11,4 +11,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### 4)  On the top-left, there is `Pending Order`. Once you click on it, you will redirected to `/` i.e. Landing page 
 
-`Deployed on Vercel` : (https://gleecus.vercel.app/)
+`Deployed on Vercel` : [Project Link](https://gleecus.vercel.app/)
