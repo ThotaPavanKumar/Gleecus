@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import Plot from "react-plotly.js"
 import axios from "axios"
+import {useNavigate} from "react-router-dom"
 
 export const  Plotly = () => {
 
     const [users,setUsers] = useState({})
+    const navigate = useNavigate()
   
         const traces = [];
         const xAxis = [];
@@ -48,10 +50,15 @@ export const  Plotly = () => {
         console.log(error)
       })
     }, [])
+
+    const handleClick = () => {
+        navigate("/pendingorders/tobesent")
+    }
     
 
   return (
     <div style={{width : "100%",height : "500px",border:"10px solid grey",overflowY:"scroll"}}>
+        <button onClick={handleClick}>Next page</button>
         <Plot data={traces} 
          layout={{
             title: 'Pending Orders Title',
