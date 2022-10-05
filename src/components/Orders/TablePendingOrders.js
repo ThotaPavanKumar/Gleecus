@@ -6,7 +6,7 @@ import axios from "axios";
 import "./TablePendingOrders.css";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import FilterListIcon from '@mui/icons-material/FilterList';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const TablePendingOrders = () => {
 
@@ -32,7 +32,11 @@ export const TablePendingOrders = () => {
     { field: 'phone' },
     { field: 'email'},
     { field: 'createdAt' },
-    { field: 'avatar' },
+    { field: 'avatar',
+    cellRenderer : function(params) {
+      return (<a href={params.value} target="_blank" rel="noreferrer">{params.value}</a>);
+    }
+  },
   ];
 
   const defaultColDef = {
@@ -76,7 +80,7 @@ export const TablePendingOrders = () => {
 
         <div className="filterContainer">
             <div><h1>To Be Sent</h1></div>
-              
+
             <div className="filter">
               <FilterListIcon />
               <div className="filterColor">Filter</div>
