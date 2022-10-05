@@ -118,6 +118,12 @@ export const  Plotly = () => {
                   layout={{
                   title: 'Pending Orders Title',
                   autosize: true,
+                  xaxis:{
+                    title : "Histogram"
+                  },
+                  yaxis:{
+                    title:"Pending Orders"
+                  }
                   }}
                   useResizeHandler={true}
                   style={{width: "100%",height:"2000px"}}
