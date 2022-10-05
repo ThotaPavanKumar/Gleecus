@@ -119,10 +119,21 @@ export const  Plotly = () => {
                   title: 'Pending Orders Title',
                   autosize: true,
                   xaxis:{
-                    title : "Histogram"
+                    title : "Histogram",
+                    titlefont: {
+                          family: 'Arial, sans-serif',
+                          size: 18,
+                          color: 'black',
+                     },
+                    linecolor: "#e9e7e7",
                   },
                   yaxis:{
-                    title:"Pending Orders"
+                    title:"Pending Orders",
+                    titlefont: {
+                          family: 'Arial, sans-serif',
+                          size: 18,
+                          color: 'black',
+                     },
                   }
                   }}
                   useResizeHandler={true}
