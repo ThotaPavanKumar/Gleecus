@@ -6,10 +6,12 @@ import axios from "axios";
 import "./TablePendingOrders.css";
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import FilterListIcon from '@mui/icons-material/FilterList';
+import { useNavigate } from "react-router-dom";
 
 export const TablePendingOrders = () => {
 
   const [rowData,setRowData] = useState();
+  const navigate = useNavigate()
   console.log("rowD",rowData)
 
   useEffect(() => {
@@ -37,7 +39,7 @@ export const TablePendingOrders = () => {
     flex:1,
     sortable:true,
     filter: 'agTextColumnFilter',
-    // floatingFilter: true,
+    floatingFilter: true,
     resizable: true,
     cellStyle: { 'fontWeight': '400',"textAlign":"left" }
   }
@@ -56,6 +58,10 @@ export const TablePendingOrders = () => {
     value:"$3000"
   }]
 
+  const handleClick = () => {
+    navigate("/homepage")
+}
+
 
   return (
     <div className="main">
@@ -63,9 +69,9 @@ export const TablePendingOrders = () => {
         <div className="track">
           <div id="trackText1">Admin</div>
           <ArrowRightAltIcon />
-          <div id="trackText">Pending Orders</div>
+          <div id="trackText" className="hover" onClick={handleClick}>Pending Orders</div>
           <ArrowRightAltIcon />
-          <div id="trackText">To Be Sent</div>
+          <div id="trackText" className="filterColor">To Be Sent</div>
         </div>
 
         <div className="filterContainer">

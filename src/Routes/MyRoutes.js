@@ -7,7 +7,7 @@ export const MyRoutes = () => {
   return (
     <div>
         <Routes>
-            <Route path="" element={<Plotly />} />
+            <Route path="/homepage" element={<Plotly />} />
             <Route path="/pendingorders/tobesent" element={<TablePendingOrders />} />
         </Routes>
     </div>

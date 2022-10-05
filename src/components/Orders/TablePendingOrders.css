@@ -49,3 +49,6 @@
     color:#036ed2;
     font-weight : bold
 }
+.hover {
+    cursor: pointer;
+}
