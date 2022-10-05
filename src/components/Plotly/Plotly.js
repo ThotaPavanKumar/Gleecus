@@ -112,8 +112,8 @@ export const  Plotly = () => {
 
 
 
-      <div>
-       <div className=''>
+      <div style={{display:"flex",gap:"2%"}}>
+       <div className="plot">
             <Plot data={traces} 
                   layout={{
                   title: 'Pending Orders Title',
@@ -126,13 +126,13 @@ export const  Plotly = () => {
                   }
                   }}
                   useResizeHandler={true}
-                  style={{width: "100%",height:"2000px"}}
+                  style={{height:"2000px"}}
             />
         </div>
 
         <div className='right'>
               <div></div>
-              <div className='track'>
+              <div className='trackSpace'>
                 <div>
                     <span>Pending Orders</span>
                     <br />
@@ -150,7 +150,7 @@ export const  Plotly = () => {
                   return (
                     <div className='box'>
                       <h3 id="bold">{ele.name}</h3>
-                      <div className='track'>
+                      <div className='content'>
                           <div className='space'>
                             <span>{ele.text1}</span>
                             <br />
@@ -167,7 +167,7 @@ export const  Plotly = () => {
                             <span id="bold">{ele.value3}</span>
                           </div>
                       </div>
-                      <div><hr style={{fontWeight:"normal",backgrounColor:"lightgrey"}}/></div>
+                      <div><hr /></div>
                       <div className='btn'  onClick={handleClick}><button className='button'>{ele.button}</button></div>
                       
                   </div>
