@@ -59,7 +59,7 @@ export const TablePendingOrders = () => {
   }]
 
   const handleClick = () => {
-    navigate("/homepage")
+    navigate("/")
 }
 
 
@@ -76,7 +76,7 @@ export const TablePendingOrders = () => {
 
         <div className="filterContainer">
             <div><h1>To Be Sent</h1></div>
-            
+              
             <div className="filter">
               <FilterListIcon />
               <div className="filterColor">Filter</div>
